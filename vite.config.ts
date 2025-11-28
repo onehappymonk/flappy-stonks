@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      // 💥 CRITICAL FIX FOR GITHUB PAGES 💥
+      base: '/flappy-stonks/', 
+      // ------------------------------------
       server: {
         port: 3000,
         host: '0.0.0.0',
